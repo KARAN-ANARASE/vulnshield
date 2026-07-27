@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VulnShield - Test App</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        .vuln-box { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to VulnShield, {{ name | safe }}!</h1>
+    <p>This application is deliberately vulnerable for security testing.</p>
+    
+    <div class="vuln-box">
+        <h3>Test XSS</h3>
+        <form action="/" method="GET">
+            <input type="text" name="name" placeholder="Enter name">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="vuln-box">
+        <h3>Test SQLi</h3>
+        <form action="/search" method="GET">
+            <input type="text" name="q" placeholder="Username">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div class="vuln-box">
+        <h3>Test Command Injection</h3>
+        <form action="/ping" method="GET">
+            <input type="text" name="target" placeholder="Host to ping">
+            <input type="submit" value="Ping">
+        </form>
+    </div>
+</body>
+</html>

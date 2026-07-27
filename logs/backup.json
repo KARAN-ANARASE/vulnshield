@@ -1,0 +1,8 @@
+{
+    "backup_id": "BK-999",
+    "admin_credentials": {
+        "username": "root",
+        "password": "RootPassword123!",
+        "ssh_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA75..."
+    }
+}
