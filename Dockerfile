@@ -1,5 +1,5 @@
 # Use a Python base image compatible with your CodeShield pipeline
-FROM python:3.14-slim                     
+FROM python:3.11-slim                     
 # Prevent Python from buffering output  
 ENV PYTHONUNBUFFERED=1                 
 # Set working directory        
